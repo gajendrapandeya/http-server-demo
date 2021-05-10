@@ -9,6 +9,10 @@ public class Json {
 
     private static ObjectMapper defaultObjectMapper() {
         ObjectMapper om = new ObjectMapper();
+        /**
+         * FAIL_ON_UNKNOWN_PROPERTIES set to false
+         * means that if any properties is missing, it won't crash
+         */
         om.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return om;
     }

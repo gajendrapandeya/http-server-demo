@@ -10,6 +10,10 @@ import java.io.IOException;
 
 public class ConfigurationManager {
 
+    /**
+     * Making ConfigurationManager a singleton
+     * as we don't require more than one instance of it
+     */
     private static ConfigurationManager myConfigurationManager;
     private static Configuration myCurrentConfiguration;
 
