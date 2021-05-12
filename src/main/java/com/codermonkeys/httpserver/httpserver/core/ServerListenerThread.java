@@ -1,4 +1,4 @@
-package com.codermonkeys.httpserver.core;
+package com.codermonkeys.httpserver.httpserver.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
 {
   "port": 8090,
-  "webroot": "tmp"
+  "webroot": "/tmp"
 }

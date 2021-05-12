@@ -1,8 +1,8 @@
-package com.codermonkeys.httpserver;
+package com.codermonkeys.httpserver.httpserver;
 
-import com.codermonkeys.httpserver.config.Configuration;
-import com.codermonkeys.httpserver.config.ConfigurationManager;
-import com.codermonkeys.httpserver.core.ServerListenerThread;
+import com.codermonkeys.httpserver.httpserver.config.Configuration;
+import com.codermonkeys.httpserver.httpserver.config.ConfigurationManager;
+import com.codermonkeys.httpserver.httpserver.core.ServerListenerThread;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

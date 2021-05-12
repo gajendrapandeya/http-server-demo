@@ -1,4 +1,4 @@
-package com.codermonkeys.httpserver.config;
+package com.codermonkeys.httpserver.httpserver.config;
 
 public class HttpConfigurationException extends RuntimeException{
 

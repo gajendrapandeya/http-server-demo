@@ -1,6 +1,6 @@
-package com.codermonkeys.httpserver.config;
+package com.codermonkeys.httpserver.httpserver.config;
 
-import com.codermonkeys.httpserver.util.Json;
+import com.codermonkeys.httpserver.httpserver.util.Json;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 

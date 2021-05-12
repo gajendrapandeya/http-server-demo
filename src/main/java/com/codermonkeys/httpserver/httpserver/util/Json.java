@@ -1,4 +1,4 @@
-package com.codermonkeys.httpserver.util;
+package com.codermonkeys.httpserver.httpserver.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
@@ -17,14 +17,33 @@ public class Json {
         return om;
     }
 
+    /**
+     * Method that parses Json String to Json Node
+     * @param jsonSrc
+     * @return
+     * @throws JsonProcessingException
+     */
     public static JsonNode parse(String jsonSrc) throws JsonProcessingException {
         return myObjectMapper.readTree(jsonSrc);
     }
 
+    /**
+     * Method that maps JsonNode to our Configuration POJO lass
+     * @param node
+     * @param clazz
+     * @param <A>
+     * @return
+     * @throws JsonProcessingException
+     */
     public static <A> A fromJson(JsonNode node, Class<A> clazz) throws JsonProcessingException {
         return myObjectMapper.treeToValue(node, clazz);
     }
 
+    /**
+     * Method that maps POJO class into JsonNode
+     * @param obj
+     * @return
+     */
     public static JsonNode toJson(Object obj) {
         return myObjectMapper.valueToTree(obj);
     }
@@ -37,6 +56,13 @@ public class Json {
         return generateJson(node, true);
     }
 
+    /**
+     * Auxiliary Method that generate String Representation of JsonNode
+     * @param o
+     * @param pretty
+     * @return
+     * @throws JsonProcessingException
+     */
     private static String generateJson(Object o, boolean pretty) throws JsonProcessingException {
         ObjectWriter objectWriter = myObjectMapper.writer();
         if(pretty)

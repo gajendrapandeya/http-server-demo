@@ -1,4 +1,4 @@
-package com.codermonkeys.httpserver.core;
+package com.codermonkeys.httpserver.httpserver.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,19 +24,23 @@ public class HttpConnectionWorkerThread extends Thread {
         OutputStream outputStream = null;
 
         try {
+            //Read request from browser
             inputStream = socket.getInputStream();
+            //Write back to the request
             outputStream = socket.getOutputStream();
+
+
 
             String html = "<html><head><title>Simple HTTP server</title></head><body><h1>This page was served by using my simple java HTTP Server</h1></body></html>";
 
             final String CRLF = "\n\r"; //13, 10
 
             String response =
-                    "HTTP/1.1 200 OK" + CRLF + //Status line: HTTP version RESPONSE CODE RESPONSE MESSAGE
-                            "Content-Length: " + html.getBytes().length + CRLF
+                    "HTTP/1.1 200 OK" + CRLF + //Statpous line: HTTP version RESPONSE CODE RESPONSE MESSAGE
+                            "Content-Length: " + html.getBytes().length + CRLF //HEADER
                             + CRLF +
                             html +
-                            CRLF + CRLF; //HEADER
+                            CRLF + CRLF;
 
             outputStream.write(response.getBytes());
 
