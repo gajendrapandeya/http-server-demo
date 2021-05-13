@@ -31,7 +31,22 @@ public class HttpConnectionWorkerThread extends Thread {
 
 
 
-            String html = "<html><head><title>Simple HTTP server</title></head><body><h1>This page was served by using my simple java HTTP Server</h1></body></html>";
+            String html = "<!DOCTYPE html>\n" +
+                    "<html>\n" +
+                    "<head>\n" +
+                    "<style>\n" +
+                    "img {\n" +
+                    "  width: 100%;\n" +
+                    "}\n" +
+                    "</style>\n" +
+                    "</head>\n" +
+                    "<body>\n" +
+                    "\n" +
+                    "<h1 style=\"text-align:center\"> This is a simple Http Server made using Java </h1>" +
+                    "<img src=\"https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500\" alt=\"HTML5 Icon\" width=\"800\" height=\"800\">\n" +
+                    "\n" +
+                    "</body>\n" +
+                    "</html>";
 
             final String CRLF = "\n\r"; //13, 10
 
